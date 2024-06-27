@@ -46,12 +46,12 @@
             "dockerBuild": {
                 "tag": "yarpapigateway:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Users.Api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Gateway.Api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Users.Api/Users.Api.csproj"
+                "appProject": "${workspaceFolder}/Gateway.Api/Gateway.Api.csproj"
             }
         },
         {
@@ -62,7 +62,7 @@
             ],
             "dockerBuild": {
                 "tag": "yarpapigateway:latest",
-                "dockerfile": "${workspaceFolder}/Users.Api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Gateway.Api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "platform": {
                     "os": "linux",
@@ -71,7 +71,7 @@
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Users.Api/Users.Api.csproj"
+                "appProject": "${workspaceFolder}/Gateway.Api/Gateway.Api.csproj"
             }
         },
         {
@@ -82,7 +82,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Users.Api/Users.Api.csproj",
+                "appProject": "${workspaceFolder}/Gateway.Api/Gateway.Api.csproj",
                 "enableDebugging": true
             }
         },
@@ -94,7 +94,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Users.Api/Users.Api.csproj"
+                "appProject": "${workspaceFolder}/Gateway.Api/Gateway.Api.csproj"
             }
         }
     ]

@@ -1,6 +1,16 @@
-@Gateway.Api_HostAddress = http://localhost:5157
+@Users_Api = http://localhost:5001/users-api
+@Products_Api = http://localhost:5001/products-api
 
-GET {{Gateway.Api_HostAddress}}/weatherforecast/
+GET {{Users_Api}}/users/
+Accept: application/json
+###
+GET {{Users_Api}}/users/1
 Accept: application/json
 
 ###
+
+GET {{Products_Api}}/products/
+Accept: application/json
+###
+GET {{Products_Api}}/products/2
+Accept: application/json

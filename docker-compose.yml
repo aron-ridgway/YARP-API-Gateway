@@ -3,10 +3,37 @@
 version: '3.4'
 
 services:
-  gatewayapi:
-    image: gatewayapi
+  gateway.api:
+    image: ${DOCKER_REGISTRY-}gatewayapi
     build:
       context: .
       dockerfile: Gateway.Api/Dockerfile
     ports:
-      - 5000:5000
+      - 5001:5001
+    networks:
+      - gateway
+
+  users.api:
+    image: ${DOCKER_REGISTRY-}usersapi
+    build:
+      context: .
+      dockerfile: Users.Api/Dockerfile
+    ports:
+      - 5100:5100
+    networks:
+      - gateway
+
+  products.api:
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: Products.Api/Dockerfile
+    ports:
+      - 5200:5200
+    networks:
+      - gateway
+
+networks:
+  gateway:
+    name: gateway
+    driver: bridge
